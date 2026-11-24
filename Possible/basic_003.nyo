@@ -1,0 +1,2 @@
+Name: "Xenophon" [ text; length < 20 ]
+Age: 999 [ uint; Age < 1000 ]
