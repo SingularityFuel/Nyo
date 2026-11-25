@@ -26,4 +26,5 @@
 | \[ \] | indicate a data type within |
 | \# | begins comment until next newline |
 | @ | indicates pointer type |
-| \` ' \~ | only in strings |
+| \~ | type assignment |
+| \` ' | only in strings |
