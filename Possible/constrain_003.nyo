@@ -1,0 +1,6 @@
+Name: "Xenophon"
+    Name ~ text
+    length(Name) < 20
+Age: 999
+    Age ~ uint
+    Age < 1000
