@@ -1,7 +1,7 @@
 # Overview
 
 1. This is a specification for files with extension '.nyo'
-2. Nyo files may contain only a subset of ASCII: newline, space, capital and lowercase letters, digits, and the following 32special characters: { } [ ] ( ) \ / ' ` " ~ < > ? ! @ # $ % ^ & * _ - + = | : ; , .
+2. Nyo files may contain only a subset of ASCII: newline, space, capital and lowercase letters, digits, and the following 32 special characters: { } [ ] ( ) \ / ' ` " ~ < > ? ! @ # $ % ^ & * _ - + = | : ; , .
 3. Nyo files always contain an even number (possibly zero) of the double-quote character "
 4. Regular Text refers to any part of a nyo file which is before the first double-quote, after the last double-quote, or between an even-numbered double-quote and the next double-quote in the file. Excludes the double-quotes themselves.
 5. Quoted Text refers to any part of a nyo file which is between an odd-numbered double-quote and the next double-quote in the file. Excludes the double-quotes themselves.
