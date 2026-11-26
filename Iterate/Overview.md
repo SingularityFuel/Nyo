@@ -13,6 +13,13 @@
     - The characters { } [ ] ( ) always form single-character **Items**. **Statements** containing these **Grouping Items** always contain an even number of them arranged in such a way that each **Group** opened is always subsequently closed, and any **Group** opened inside another **Group** is always closed before that other **Group** closes.
     - The & and | characters always form single-character **Items**. These **Items** are the **AND Operator** and **OR Operator**. Note that Nyo does not use the conventional two-character versions of these operators which appear in other languages.
     - The _ character can appear in two ways: on its own as **Null** or as part of a **Name**.
+    - The - character may appear in two ways: On its own as the **Minus Operator** or as the first character in a **Number**.
+    - The + character can only appear as the single-character **Plus Operator**.
+    - The * character can only appear as the single-character **Multiply Operator**.
+    - The / character can only appear as the single-character **Divide Operator**.
+    - The ! character can only appear as the single-character **NOT Operator**. Note that the **NOT Operator** will have more valid usages than it does in most programming languages.
+    - The % character can only appear as the single-character **Modulo Operator**.
+    - The ^ character can only appear as the single-character **Exponentiate Operator**.
 11. Outside of **Quoted Text**, letters and digits exist only in three types of **Items**: **Names**, **Keywords**, and **Numbers**.
     - **Names** begin with a letter and are followed by any uninterrupted series of letters, digits, and underscores. A **Name** ends when any other character or the end of the file appears. A **Name** cannot end with an underscore.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
