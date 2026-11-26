@@ -11,3 +11,7 @@
 9. The special characters ' and ` can only appear inside **Quoted Text**.
 10. **Items** in **Regular Text** may contain only capital and lowercase letters, digits, and the following 27 special characters: { } [ ] ( ) / ~ < > ? ! @ # $ % ^ & * _ - + = | : , .
     - The characters { } [ ] ( ) always form single-character **Items**. **Statements** containing these **Grouping Items** always contain an even number of them arranged in such a way that each **Group** opened is always subsequently closed, and any **Group** opened inside another **Group** is always closed before that other **Group** closes.
+11. Outside of **Quoted Text**, alphanumeric characters and underscores exist only in three types of **Items**: **Names**, **Keywords**, and **Numbers**.
+    - **Names** begin with a letter and are followed by any uninterrupted series of letters, digits, and underscores. A **Name** ends when any other character or the end of the file appears.
+    - **Keywords** have the exact same rules and compositions as **Names**, but have special effects defined by the Nyo specification in advance.
+    - **Numbers** are composed of one or more digits and at most one decimal point, which is neither the first nor the last character in the **Number**. A **Number** ends when any other character or the end of the file appears.
