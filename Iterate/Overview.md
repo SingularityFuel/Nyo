@@ -17,3 +17,5 @@
     - **Names** begin with a letter and are followed by any uninterrupted series of letters, digits, and underscores. A **Name** ends when any other character or the end of the file appears. A **Name** cannot end with an underscore.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
     - **Numbers** are composed of an optional negative sign, followed by one or more digits and at most one decimal point. The decimal point is always after a digit and is never the last character in the **Number**. The first digit in a **Number** can only be zero if that zero is immediately followed by a decimal or if the **Number** is the zero character on its own. A **Number** ends when any non-digit character (except a correctly placed decimal or leading negative sign) or the end of the file appears.
+12. The end of a **Nyo File** terminates any **Items** or **Statements**.
+13. A **Nyo File** which does not or cannot meet this full specification is invalid in its entirety.
