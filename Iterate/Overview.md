@@ -22,9 +22,13 @@
     - The + character can only appear as the single-character **Plus Operator**.
     - The * character can only appear as the single-character **Multiply Operator**.
     - The / character can only appear as the single-character **Divide Operator**.
-    - The ! character can only appear as the single-character **NOT Operator**. Note that the **NOT Operator** will have more valid usages than it does in most programming languages.
+    - The ! character can appear as the single-character **NOT Operator** or as part of the two-character **ELSE** ( !? ) **Token**. Note that the **NOT Operator** will have more valid usages than it does in most programming languages.
     - The % character can only appear as the single-character **Modulo Operator**.
     - The ^ character can only appear as the single-character **Exponentiate Operator**.
+    - The > and < characters can only appear as the single-character **Lesser** and **Greater** operators. Note the absence of dedicated LTE or GTE operators.
+    - The = character can only appear as the single-character **Equal** operator.
+    - The ? character can appear either as the single-character **IF** **Token** or as part of the two-character **THEN** ( :? ) or **ELSE** ( !? ) **Tokens**.
+    - The : character can appear as the single-character **Assign Operator** or as part of the **THEN** ( :? ) **Token**.
 11. Outside of **Quoted Text**, letters and digits exist only in three types of **Tokens**: **Names**, **Keywords**, and **Numbers**.
     - **Names** begin with a letter and are followed by any uninterrupted series of letters and digits. A **Name** ends when any other character appears.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
