@@ -14,7 +14,7 @@
 8. Each **Statement** is composed of zero or more **Tokens** which may be separated by **Token Separators**. **Quoted Text** including its initial and final double-quotes is always one **Token**. A single space or any number of consecutive spaces create a single **Token Separator**. Some consecutive **Tokens** do not require **Token Separators** and will therefore not have spaces between them, but each space in **Unquoted Text** is part of a **Token Separator**. **Statement Separators** are neither **Tokens** nor **Token Separators** by definition, since they exist outside **Statements**. There is no such thing as an empty **Token**. Leading and trailing **Token Separators** in a **Statement** are ignored.
     - A zero-length **Quoted Text** segment is still a **Token**. A zero-length region of **Unquoted Text** (created by a closing quote immediately followed by an opening quote) contains no **Tokens**.
 9. The special characters ' ` $ @ # can only appear inside **Quoted Text**.
-10. **Tokens** in **Unquoted Text** may contain only capital and lowercase letters, digits, and the following 24 special characters: ! % & ( ) * + , - . / : < = > ? [ ] ^ _ { | } ~
+10. The following rules apply to **Tokens** in **Unquoted Text**, which may contain only capital and lowercase letters, digits, and these 24 special characters: ! % & ( ) * + , - . / : < = > ? [ ] ^ _ { | } ~
     - The characters { } [ ] ( ) always form single-character **Tokens**. **Statements** containing these **Grouping Tokens** always contain an even number of them arranged in such a way that each **Group** opened is always subsequently closed, and any **Group** opened inside another **Group** is always closed before that other **Group** closes.
     - The & and | characters always form single-character **Tokens**. These **Tokens** are the **AND Operator** and **OR Operator**. Note that Nyo does not use the conventional two-character versions of these operators which appear in other languages.
     - The _ character can only appear as the single-character **Null**.
@@ -27,11 +27,13 @@
     - The ^ character can only appear as the single-character **Exponentiate Operator**.
     - The > and < characters can only appear as the single-character **Lesser** and **Greater** operators. Note the absence of dedicated LTE or GTE operators.
     - The = character can only appear as the single-character **Equal** operator.
-    - The ? character can appear either as the single-character **IF** **Token** or as part of the two-character **THEN** ( ?: ) or **ELSE** ( !? ) **Tokens**. When a ? character is preceded by !, the larger token is always formed rather than **IF**. When a ? character is followed by :, the larger token is always formed rather than **IF**. The sequence !?: never appears.
+    - The ? character can appear either as the single-character **IF** **Token** or as part of the two-character **THEN** ( ?: ) or **ELSE** ( !? ) **Tokens**. When a ? character is preceded by !, the larger token is always formed rather than **IF**. When a ? character is followed by :, the larger token is always formed rather than **IF**. The sequence !?: never appears outside **Quoted Text**.
     - The : character can appear as the single-character **Assign Operator** or as part of the **THEN** ( ?: ) **Token**.
     - The ~ character always appears as the single-character **Like Operator**.
     - The . character, when not directly between digit characters, is the single-character **Dot Token**.
     - The , character is always the single-character **Comma Token**.
+    - Any **Operator** is a single **Token**, regardless of the **Operator**'s length.
+    - Because **Quoted Text** (including its double-quote characters) is a single **Token**, no **Operators** or **Tokens** exist inside **Quoted Text**, even if their component characters appear.
 11. Outside of **Quoted Text**, letters and digits exist only in three types of **Tokens**: **Names**, **Keywords**, and **Numbers**.
     - **Names** begin with a letter and are followed by any uninterrupted series of letters and digits. A **Name** ends when any other character appears.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
