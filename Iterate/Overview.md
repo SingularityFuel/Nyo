@@ -32,11 +32,11 @@
     - The ~ character always appears as the single-character **Like Operator**.
     - The . character, when not directly between digit characters, is the single-character **Dot Token**.
     - The , character is always the single-character **Comma Token**.
-    - Any **Operator** is a single **Token**, regardless of the **Operator**'s length.
-    - Because **Quoted Text** (including its double-quote characters) is a single **Token**, no **Operators** or **Tokens** exist inside **Quoted Text**, even if their component characters appear.
-11. Outside of **Quoted Text**, letters and digits exist only in three types of **Tokens**: **Names**, **Keywords**, and **Numbers**.
+11. Any **Operator** is a single **Token**, regardless of the **Operator**'s length.
+12. Because **Quoted Text** (including its double-quote characters) is a single **Token**, no **Operators** or **Tokens** exist inside **Quoted Text**, even if their component characters appear.
+13. Outside of **Quoted Text**, letters and digits exist only in three types of **Tokens**: **Names**, **Keywords**, and **Numbers**.
     - **Names** begin with a letter and are followed by any uninterrupted series of letters and digits. A **Name** ends when any other character appears.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
     - **Numbers** are composed of one or more digits and at most one decimal point. The decimal point is neither the first nor the last character in the **Number**. The first digit in a **Number** can only be zero if that zero is immediately followed by a decimal or if the **Number** is the zero character on its own. A **Number** ends when any non-digit character (except a correctly placed decimal) appears.
-12. The end of a **Nyo File** terminates any **Tokens** or **Statements**.
-13. A **Nyo File** which does not or cannot meet this full specification is invalid in its entirety.
+14. The end of a **Nyo File** terminates any **Tokens** or **Statements**.
+15. A **Nyo File** which does not or cannot meet this full specification is invalid in its entirety.
