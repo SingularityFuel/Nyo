@@ -12,7 +12,7 @@
 10. **Items** in **Regular Text** may contain only capital and lowercase letters, digits, and the following 27 special characters: { } [ ] ( ) / ~ < > ? ! @ # $ % ^ & * _ - + = | : , .
     - The characters { } [ ] ( ) always form single-character **Items**. **Statements** containing these **Grouping Items** always contain an even number of them arranged in such a way that each **Group** opened is always subsequently closed, and any **Group** opened inside another **Group** is always closed before that other **Group** closes.
     - The & and | characters always form single-character **Items**. These **Items** are the **AND Operator** and **OR Operator**. Note that Nyo does not use the conventional two-character versions of these operators which appear in other languages.
-    - The _ character can appear in two ways: on its own as **Null** or as part of a **Name**.
+    - The _ character can only appear as the single-character **Null**.
     - The - character can only appear as the single-character **Minus Operator**.
     - The + character can only appear as the single-character **Plus Operator**.
     - The * character can only appear as the single-character **Multiply Operator**.
@@ -21,7 +21,7 @@
     - The % character can only appear as the single-character **Modulo Operator**.
     - The ^ character can only appear as the single-character **Exponentiate Operator**.
 11. Outside of **Quoted Text**, letters and digits exist only in three types of **Items**: **Names**, **Keywords**, and **Numbers**.
-    - **Names** begin with a letter and are followed by any uninterrupted series of letters, digits, and underscores. A **Name** ends when any other character appears. A **Name** cannot end with an underscore.
+    - **Names** begin with a letter and are followed by any uninterrupted series of letters and digits. A **Name** ends when any other character appears.
     - **Keywords** contain only letters and have special effects defined by the Nyo specification in advance.
     - **Numbers** are composed of one or more digits and at most one decimal point. The decimal point is neither the first nor the last character in the **Number**. The first digit in a **Number** can only be zero if that zero is immediately followed by a decimal or if the **Number** is the zero character on its own. A **Number** ends when any non-digit character (except a correctly placed decimal) appears.
 12. The end of a **Nyo File** terminates any **Items** or **Statements**.
